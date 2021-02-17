@@ -382,6 +382,7 @@ END;
     public static function parseDSN($sDSN)
     {
         // https://secure.php.net/manual/en/ref.pdo-pgsql.connection.php
+        echo 'dsn string: ' . $sDSN;
         $aInfo = array();
         if (preg_match('/^pgsql:(.+)$/', $sDSN, $aMatches)) {
             foreach (explode(';', $aMatches[1]) as $sKeyVal) {
@@ -392,6 +393,7 @@ END;
                 $aInfo[$sKey] = $sVal;
             }
         }
+        var_dump($aInfo);
         return $aInfo;
     }
 
