@@ -5,7 +5,7 @@ if (file_exists(getenv('NOMINATIM_SETTINGS'))) require_once(getenv('NOMINATIM_SE
 if (file_exists(CONST_InstallPath.'/settings/local.php')) require_once(CONST_InstallPath.'/settings/local.php');
 
 // General settings
-@define('CONST_Database_DSN', 'pgsql:dbname=nominatim'); // or add ;host=...;port=...;user=...;password=...
+@define('CONST_Database_DSN', 'pgsql:host=db;port=5432;user=nominatim;password=password1234;dbname=nominatim'); // or add ;host=...;port=...;user=...;password=...
 @define('CONST_Database_Web_User', 'www-data');
 @define('CONST_Database_Module_Path', CONST_InstallPath.'/module');
 @define('CONST_Max_Word_Frequency', '50000');
